@@ -15,4 +15,4 @@ Una sobre-escritura de metodos es cuando otra clase reescribe un metodo existent
 
 I. (25%) DISEÑANDO
 
-![(img/diagrama1.svg)]
+![(img/Diseño1.svg)]
