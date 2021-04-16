@@ -23,7 +23,7 @@ public class Iteration {
     }
 
     public Duration getDuration() throws SabanaResearchException{
-        if(activities.isEmpty()){
+        if(this.activities.isEmpty()){
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_ITERATION);
         }
         for(Activity a:this.activities){

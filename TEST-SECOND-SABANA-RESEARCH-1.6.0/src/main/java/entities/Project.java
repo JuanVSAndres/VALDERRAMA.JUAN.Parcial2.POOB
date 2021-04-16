@@ -29,7 +29,7 @@ public class Project {
     }
 
     public Duration getDuration() throws SabanaResearchException {
-        if(iterations.isEmpty()){
+        if(this.iterations.isEmpty()){
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_PROJECT);
         }
         for(Iteration i:this.iterations){
