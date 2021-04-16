@@ -13,6 +13,7 @@ public class Project {
     private Group group;
     private List<Iteration> iterations;
 
+
     public Project(String name, LocalDate dateInit, LocalDate dateEnd, Group group) {
         this.name = name;
         this.dateInit = dateInit;
@@ -28,7 +29,13 @@ public class Project {
     }
 
     public Duration getDuration() throws SabanaResearchException {
-        return Duration.ofDays(0);
+        if(iterations.isEmpty()){
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_PROJECT);
+        }
+        for(Iteration i:this.iterations){
+            i.getDuration();
+        }
+        return null;
     }
 
 

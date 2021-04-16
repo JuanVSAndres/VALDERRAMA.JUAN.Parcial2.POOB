@@ -20,7 +20,16 @@ public class DocumentedActivity extends Activity {
     }
 
     @Override
-    public Duration getDuration() {
+    public Duration getDuration() throws SabanaResearchException {
+        if(activity==null){
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY_WITHOUT_NORMAL_QUESTION);
+        }
+        if(questions.isEmpty()){
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY_WITHOUT_NORMAL_QUESTION);
+        }
+        for(Question q:this.questions){
+            q.getDedication();
+        }
         return null;
     }
 }
