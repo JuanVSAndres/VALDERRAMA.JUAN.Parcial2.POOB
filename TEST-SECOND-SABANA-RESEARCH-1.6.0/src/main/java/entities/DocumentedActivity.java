@@ -25,8 +25,9 @@ public class DocumentedActivity extends Activity {
             throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY_WITHOUT_NORMAL_QUESTION);
         }
         if(questions.isEmpty()){
-            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY_WITHOUT_NORMAL_QUESTION);
+            throw new SabanaResearchException(SabanaResearchException.BAD_FORMED_DOCUMENTED_ACTIVITY);
         }
+        activity.getDuration();
         for(Question q:this.questions){
             q.getDedication();
         }
