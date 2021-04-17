@@ -33,6 +33,7 @@ public class DocumentedActivity extends Activity {
         for(Question q:this.questions){
            d.plus(q.getDedication());
         }
+        d.plus(activity.getDuration());
         return d;
     }
 }
